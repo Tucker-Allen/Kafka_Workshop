@@ -1,5 +1,6 @@
 # Near Real-Time Data: The Beauty of Pub/Sub Systems and Getting Started with Kafka
 ## RE-WORK, AI In Insurance Summit @ NYC
+https://www.re-work.co/events/ai-in-insurance-summit-new-york-2019
 
 For the Hands-on Kafka portion of the Kafka Workshop, it will be supremely helpful to have the following installed ahead of time. (Full disclosure: I do not own a Windows machine, so I cannot guarantee that I'll be able to provide competent technical support for Windows-related issues)
 
