@@ -1,10 +1,11 @@
 # Near Real-Time Data: The Beauty of Pub/Sub Systems and Getting Started with Kafka
-## RE-WORK, AI In Insurance Summit @ NYC
+**RE-WORK, AI In Insurance Summit @ NYC** </br>
 https://www.re-work.co/events/ai-in-insurance-summit-new-york-2019
 
 For the Hands-on Kafka portion of the Kafka Workshop, it will be supremely helpful to have the following installed ahead of time. (Full disclosure: I do not own a Windows machine, so I cannot guarantee that I'll be able to provide competent technical support for Windows-related issues)
 
-### Java (most important)
+## Download These Ahead of Time!
+### 1. Java (most important)
 
 Check to see if you already have Java installed. In Terminal (or Windows equivalent, such as Bash), try:
 
@@ -29,13 +30,15 @@ Java(TM) SE Runtime Environment (build 12.0.2+10)
 Java HotSpot(TM) 64-Bit Server VM (build 12.0.2+10, mixed mode, sharing)
 ```
 
-or similar.
+## Day of Workshop
 
-## Apache Kafka
+### 2. Apache Kafka
 
 Follow "Step 1: Download the code" provided here: https://kafka.apache.org/quickstart
 
 And that's it. We'll walk through a modified form of Steps 2 to Step 5 together as a class, and we'll demonstrate the importance of certain configuration settings, and how changing them will impact your Kafka implementation.
+
+
 
 ## Executables
 
@@ -57,14 +60,30 @@ And that's it. We'll walk through a modified form of Steps 2 to Step 5 together 
 
 
 - Window 5 (Consumer)
-  - `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TestTopicA --from-beginning --consumer.property`
+  - `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TestTopicA --from-beginning`
 - Window 6 (Consumer)
-  - `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TestTopicA --from-beginning --consumer.property`
+  - `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TestTopicB --from-beginning`
 
 (If there's time)
 - Window 5
   - (Ctrl+C to halt)
-  - `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TestTopicA --from-beginning --consumer.property group.id=MyGroup`
-- Window 5 (Producer)
+  - `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TestTopicA --from-beginning --consumer-property group.id=MyGroup`
+- Window 6 (Producer)
   - (Ctrl+C to halt)
-  - `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TestTopicB --from-beginning --consumer.property group.id=MyGroup`
+  - `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TestTopicB --from-beginning --consumer-property group.id=MyGroup`
+  - (Ctrl+C to halt)
+  - `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092  --from-beginning --consumer-property group.id=MyGroup --whitelist "[a-zA-Z]*"`
+
+## Key Config Files
+
+- conf
+  - zookeeper.properties
+  - server.properties
+  - producer.properties
+  - consumer.properties
+- bin
+  - zookeeper-server-start/stop.sh
+  - kafka-server-start/stop.sh
+  - kafka-topics.sh
+  - kafka-console-producer.sh
+  - kafka-console-consumer.sh
