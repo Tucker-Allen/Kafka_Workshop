@@ -35,4 +35,36 @@ or similar.
 
 Follow "Step 1: Download the code" provided here: https://kafka.apache.org/quickstart
 
-And that's it. We'll walk from Step 2 to Step 5 together as a class, and we'll demonstrate the importance of certain configuration settings, and how changing them will impact your Kafka implementation.
+And that's it. We'll walk through a modified form of Steps 2 to Step 5 together as a class, and we'll demonstrate the importance of certain configuration settings, and how changing them will impact your Kafka implementation.
+
+## Executables
+
+- Window 1
+  - `bin/zookeeper-server-start.sh config/zookeeper.properties`
+- Window 2
+  - `bin/kafka-server-start.sh config/server.properties`
+
+
+- Create Topics
+  - `bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic TestTopicA`
+  - `bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic TestTopicB`
+
+
+- Window 3 (Producer)
+  - `bin/kafka-console-producer.sh --broker-list localhost:9092 --topic TestTopicA`
+- Window 4 (Producer)
+  - `bin/kafka-console-producer.sh --broker-list localhost:9092 --topic TestTopicB`
+
+
+- Window 5 (Consumer)
+  - `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TestTopicA --from-beginning --consumer.property`
+- Window 6 (Consumer)
+  - `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TestTopicA --from-beginning --consumer.property`
+
+(If there's time)
+- Window 5
+  - (Ctrl+C to halt)
+  - `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TestTopicA --from-beginning --consumer.property group.id=MyGroup`
+- Window 5 (Producer)
+  - (Ctrl+C to halt)
+  - `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TestTopicB --from-beginning --consumer.property group.id=MyGroup`
