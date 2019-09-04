@@ -30,8 +30,6 @@ Java(TM) SE Runtime Environment (build 12.0.2+10)
 Java HotSpot(TM) 64-Bit Server VM (build 12.0.2+10, mixed mode, sharing)
 ```
 
-## Day of Workshop
-
 ### 2. Apache Kafka
 
 Follow "Step 1: Download the code" provided here: https://kafka.apache.org/quickstart.
@@ -39,7 +37,7 @@ I recommend placing the unzipped `kafka_2.12-2.3.0` folder somewhere on your des
 
 And that's it. We'll walk through a modified form of Steps 2 to Step 5 together as a class, and we'll demonstrate the importance of certain configuration settings, and how changing them will impact your Kafka implementation.
 
-
+## Day of Workshop
 
 ## Executables
 
