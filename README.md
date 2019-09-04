@@ -39,7 +39,7 @@ And that's it. We'll walk through a modified form of Steps 2 to Step 5 together 
 
 ## Day of Workshop
 
-## Executables
+### Executables
 
 - **Window 1 (Zookeeper Service)**
   - `bin/zookeeper-server-start.sh config/zookeeper.properties`
@@ -73,7 +73,7 @@ And that's it. We'll walk through a modified form of Steps 2 to Step 5 together 
   - (Ctrl+C to halt)
   - `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092  --from-beginning --consumer-property group.id=MyGroup --whitelist "[a-zA-Z]*"`
 
-## Key Config Files
+### Key Config Files
 
 - conf
   - zookeeper.properties
