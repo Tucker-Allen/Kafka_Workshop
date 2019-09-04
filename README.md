@@ -64,7 +64,7 @@ And that's it. We'll walk through a modified form of Steps 2 to Step 5 together 
 - Window 6 (Consumer)
   - `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TestTopicB --from-beginning`
 
-(If there's time)
+#### Advanced (If there's time)
 - Window 5
   - (Ctrl+C to halt)
   - `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TestTopicA --from-beginning --consumer-property group.id=MyGroup`
