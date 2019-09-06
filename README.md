@@ -41,6 +41,8 @@ And that's it. We'll walk through a modified form of Steps 2 to Step 5 together 
 
 ### Executables
 
+Navigate to inside your `kafka_2.12-2.3.0`, or similar, folder. Going to need a few (okay, a lot of) Terminal/Bash windows for this:
+
 - **Window 1 (Zookeeper Service)**
   - `bin/zookeeper-server-start.sh config/zookeeper.properties`
 - **Window 2 (Kafka Service)**
